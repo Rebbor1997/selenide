@@ -4,10 +4,10 @@ import baseEntities.BaseTest;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.testng.ScreenShooter;
 import core.ReadProperties;
 import org.openqa.selenium.By;
-import org.testng.annotations.Listeners;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.ProductsPage;
@@ -15,8 +15,10 @@ import pages.ProductsPage;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-@Listeners({ScreenShooter.class})
+
 public class FirstClass extends BaseTest {
+
+    Logger logger = LoggerFactory.getLogger(FirstClass.class);
 
     LoginPage loginPage;
     ProductsPage productsPage;

@@ -14,7 +14,8 @@ public class BaseTest {
 */
         Configuration.baseUrl = ReadProperties.getInstance().getURL();
         Configuration.browser = ReadProperties.getInstance().getBrowser();
-        Configuration.startMaximized = true;
         Configuration.fastSetValue = true;
+
+        org.apache.log4j.BasicConfigurator.configure();
     }
 }
